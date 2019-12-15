@@ -1,6 +1,6 @@
 package com.hackerrank.challenges.model;
 
-public class ResponsePayment {
+public class ResponseCurrencyFormatter {
 
 	private String us;
 
@@ -8,13 +8,13 @@ public class ResponsePayment {
 
 	private String china;
 
-	private String francia;
+	private String france;
 	
-	public ResponsePayment(String us, String india, String china, String francia) {
+	public ResponseCurrencyFormatter(String us, String india, String china, String france) {
 		this.us = us;
 		this.india = india;
 		this.china = china;
-		this.francia = francia;
+		this.france = france;
 	}
 
 	public String getUs() {
@@ -41,12 +41,12 @@ public class ResponsePayment {
 		this.china = china;
 	}
 
-	public String getFrancia() {
-		return francia;
+	public String getFrance() {
+		return france;
 	}
 
-	public void setFrancia(String francia) {
-		this.francia = francia;
+	public void setFrance(String france) {
+		this.france = france;
 	}
 
 }

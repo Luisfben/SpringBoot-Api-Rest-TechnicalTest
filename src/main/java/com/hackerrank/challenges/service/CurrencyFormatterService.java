@@ -1,9 +1,9 @@
 package com.hackerrank.challenges.service;
 
-import com.hackerrank.challenges.model.ResponsePayment;
+import com.hackerrank.challenges.model.ResponseCurrencyFormatter;
 
 public interface CurrencyFormatterService {
 
-	public abstract ResponsePayment ejecute(double payment);
+	public abstract ResponseCurrencyFormatter execute(double payment);
 
 }

@@ -5,23 +5,23 @@ import java.util.Locale;
 
 import org.springframework.stereotype.Service;
 
-import com.hackerrank.challenges.model.ResponsePayment;
+import com.hackerrank.challenges.model.ResponseCurrencyFormatter;
 import com.hackerrank.challenges.service.CurrencyFormatterService;
 
 @Service
 public class CurrencyFormatterServiceImpl implements CurrencyFormatterService {
 
 	@Override
-	public ResponsePayment ejecute(double payment) {
+	public ResponseCurrencyFormatter execute(double payment) {
 		Locale indiaLocale = new Locale("en", "IN");
 
 		NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
 		NumberFormat india = NumberFormat.getCurrencyInstance(indiaLocale);
 		NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
-		NumberFormat francia = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+		NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
 
-		return new ResponsePayment(us.format(payment), india.format(payment), china.format(payment),
-				francia.format(payment));
+		return new ResponseCurrencyFormatter(us.format(payment), india.format(payment), china.format(payment),
+				france.format(payment));
 	}
 
 }

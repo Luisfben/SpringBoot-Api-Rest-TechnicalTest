@@ -1,6 +1,6 @@
 package com.hackerrank.challenges.model;
 
-public class RequestPayment {
+public class RequestCurrencyFormatter {
 
 	private double payment;
 

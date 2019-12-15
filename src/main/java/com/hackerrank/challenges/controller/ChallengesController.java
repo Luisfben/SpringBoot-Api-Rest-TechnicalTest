@@ -20,15 +20,15 @@ public class ChallengesController {
 
 	@Autowired
 	DateAndTimeService dateAndTimeService;
-	
-  	@PostMapping("/currencyformatter")
+
+	@PostMapping("/currencyformatter")
 	public ResponseCurrencyFormatter currencyformatter(@RequestBody RequestCurrencyFormatter payment) {
 		return currencyFormatterService.execute(payment);
 	}
 
-  	@PostMapping("/dateandtime")
+	@PostMapping("/dateandtime")
 	public ResponseDateAndTime dateandtime(@RequestBody RequestDateAndTime date) {
 		return dateAndTimeService.execute(date);
 	}
-  
+
 }

@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.hackerrank.challenges.exception.YearNotAllowedException;
 import com.hackerrank.challenges.model.RequestDateAndTime;
 import com.hackerrank.challenges.model.ResponseDateAndTime;
 import com.hackerrank.challenges.service.DateAndTimeService;
@@ -22,6 +23,10 @@ public class DateAndTimeServiceImpl implements DateAndTimeService {
 		int m = date.getMonth();
 		int d = date.getDay();
 		int y = date.getYear();
+
+		if (!(y > 2000 && y < 3000)) {
+			throw new YearNotAllowedException(String.valueOf(y));
+		}
 
 		Calendar c = Calendar.getInstance();
 		c.set(y, m - 1, d);

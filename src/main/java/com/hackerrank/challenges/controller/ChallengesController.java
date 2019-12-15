@@ -23,12 +23,12 @@ public class ChallengesController {
 	
   	@PostMapping("/currencyformatter")
 	public ResponseCurrencyFormatter currencyformatter(@RequestBody RequestCurrencyFormatter payment) {
-		return currencyFormatterService.execute(payment.getPayment());
+		return currencyFormatterService.execute(payment);
 	}
- 
+
   	@PostMapping("/dateandtime")
 	public ResponseDateAndTime dateandtime(@RequestBody RequestDateAndTime date) {
-		return dateAndTimeService.execute(date.getMonth(),date.getDay(),date.getYear());
+		return dateAndTimeService.execute(date);
 	}
   
 }

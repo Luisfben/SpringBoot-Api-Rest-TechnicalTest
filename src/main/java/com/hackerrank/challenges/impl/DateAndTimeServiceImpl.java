@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.hackerrank.challenges.model.RequestDateAndTime;
 import com.hackerrank.challenges.model.ResponseDateAndTime;
 import com.hackerrank.challenges.service.DateAndTimeService;
 
@@ -16,7 +17,11 @@ public class DateAndTimeServiceImpl implements DateAndTimeService {
 			"SATURDAY");
 
 	@Override
-	public ResponseDateAndTime execute(int m, int d, int y) {
+	public ResponseDateAndTime execute(RequestDateAndTime date) {
+
+		int m = date.getMonth();
+		int d = date.getDay();
+		int y = date.getYear();
 
 		Calendar c = Calendar.getInstance();
 		c.set(y, m - 1, d);

@@ -114,6 +114,14 @@ Adicione una linea al final, como el ejemplo:
 `curl -d '{"month":8,"day":5,"year":2015}' -H 'Content-Type: application/json' http://localhost:8080/dateandtime`
 
 
+## OpenShift
+
+Es un producto de computación en la nube de plataforma como servicio (PaaS) de Red Hat. Los desarrolladores pueden usar Git para desplegar sus aplicaciones Web en diferentes lenguajes. Los servicios fueron desplegados en esta plataforma, a continuación, se relacionan las url:
+
+http://challenges5-springboot.apps.ca-central-1.starter.openshift-online.com/currencyformatter
+
+http://challenges5-springboot.apps.ca-central-1.starter.openshift-online.com/dateandtime
+
 ## Pruebas unitarias
 
 En total se implementarion 5; 4 del servicio /currencyformatter; y 1 del servicio /dateandtime. Estan ubicadas en el siguiente archivo:

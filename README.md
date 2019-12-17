@@ -171,9 +171,8 @@ public class YearNotAllowedException extends RuntimeException {
 ```
 
 ```java
-  /*1e9 express numbers in scientific notation 10ˆ9*/
-  if (!(p >= 0 && p <= 1e9)) {
-    throw new PaymentValueNotAllowedException(String.valueOf(p));
+  if (!(y > 2000 && y < 3000)) {
+  throw new YearNotAllowedException(String.valueOf(y));
   }
 ```
 ***Response***

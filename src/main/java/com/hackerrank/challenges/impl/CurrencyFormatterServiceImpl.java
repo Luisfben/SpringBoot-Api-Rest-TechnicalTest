@@ -24,6 +24,10 @@ public class CurrencyFormatterServiceImpl implements CurrencyFormatterService {
 			throw new PaymentValueNotAllowedException(String.valueOf(p));
 		}
 
+		if (!(p >= 0 && p <= 1e9)) {
+			throw new PaymentValueNotAllowedException(String.valueOf(p));
+		}
+
 		Locale indiaLocale = new Locale("en", "IN");
 
 		NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);

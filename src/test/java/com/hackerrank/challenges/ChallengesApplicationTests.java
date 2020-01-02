@@ -31,7 +31,7 @@ class ChallengesApplicationTests {
 		RequestCurrencyFormatter payment = new RequestCurrencyFormatter();
 		payment.setPayment(123);
 		ResponseCurrencyFormatter responseCurrencyFormatter = currencyFormatterService.execute(payment);
-		assertThat(responseCurrencyFormatter.getUs()).isEqualTo("$123.00");
+		assertThat(responseCurrencyFormatter.getUs()).isEqualTo("123.00");
 	}
 
 	@Test
